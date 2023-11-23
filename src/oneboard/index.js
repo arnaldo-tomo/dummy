@@ -7,6 +7,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { LinearGradient } from 'expo-linear-gradient';
 import { TouchableOpacity } from "react-native";
 import { Services } from "../../services";
+import { OutSide } from "../screens/home";
 const { width, height } = Dimensions.get('screen');
 export const Onboard = ({ navigation }) => {
     return (
@@ -35,7 +36,7 @@ export const Onboard = ({ navigation }) => {
                         }} >
                             < Text style={{ fontWeight: 'bold', fontSize: 15, }}>SIGN UP WITH EMAIL</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={() => Services.removeValue()} style={{
+                        <TouchableOpacity style={{
                             borderColor: 'white', borderWidth: 1, padding: 15, borderRadius: 30,
                             width: width - 60, height: 60, flexDirection: 'row', alignItems: 'center', justifyContent: 'center'
                         }} >
