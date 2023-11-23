@@ -30,6 +30,7 @@ function StackNavgation() {
                     <Stack.Screen name="OnBoard" component={Onboard} options={{ headerShown: false }} />
                 }
                 <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
+                <Stack.Screen name="OneBoard" component={Onboard} options={{ headerShown: false }} />
             </Stack.Navigator>
         </NavigationContainer>
     );
