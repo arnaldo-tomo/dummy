@@ -16,22 +16,17 @@ export class Services {
                 .then(res => res.json())
                 .then((p) => {
                     if (p.token) {
-                        this.storeData(p)
-                        console.log('UserToken', p)
+                        console.log(p)
+                        this.storeData(p);
                     }
                     if (p.message) {
                         Alert.alert(p.message)
                     }
                 })
-                .catch((error) => console.log('ola', error))
-
-
-
+                .catch((error) => console.log('catch no login', error))
         } catch (error) {
             console.log('CAtch', error)
         }
-
-
     }
     static storeData = async (p) => {
         try {
@@ -50,39 +45,28 @@ export class Services {
             const jsonValue = await AsyncStorage.getItem('UserToken');
             // return jsonValue != null ? JSON.parse(jsonValue) : null;
             if (jsonValue) {
-                console.log('true', jsonValue)
+                console.log('getData', jsonValue)
                 return true;
             } else {
-                console.log('false', jsonValue)
+                console.log('getData', jsonValue)
                 return false;
 
             }
         } catch (e) {
-            // error reading value
+            console.log('catch', e)
         }
     };
 
-
-
     static removeValue = async () => {
         try {
-            await AsyncStorage.removeItem('UserToken')
+            await AsyncStorage.removeItem('UserToken');
+            console.log('removeValue.');
         } catch (e) {
-            // remove error
-        }
-
-        console.log('Done.')
-    }
-
-
-    static checked() {
-        try {
-            this.getData().then((e) => e)
-            return e;
-        } catch (e) {
-
+            console.log('catch', e);
         }
     }
+
+
 }
 
 
