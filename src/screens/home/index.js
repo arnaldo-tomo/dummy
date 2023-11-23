@@ -1,17 +1,13 @@
 import { Text, TouchableOpacity } from "react-native"
-import { View } from "react-native"
-import { Services } from "../../../services"
+import { View } from "react-native";
+import { Services } from "../../../services";
 
-export const OutSide = ({ navigation }) => {
-    Services.removeValue();
-    navigation.navigate('OneBoard');
-}
-export const Home = () => {
+export const Home = ({ navigation }) => {
     return (
         <View>
             <Text>HOME</Text>
 
-            <TouchableOpacity onPress={() => OutSide()}>
+            <TouchableOpacity onPress={() => Services.GoOut({ navigation })}>
                 <Text>Logout</Text>
             </TouchableOpacity>
         </View>
