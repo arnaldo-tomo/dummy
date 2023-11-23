@@ -1,18 +1,12 @@
-import { StatusBar } from "react-native"
-import { SafeAreaView } from "react-native"
-import { Dimensions } from "react-native"
-import { Text } from "react-native"
-import { View } from "react-native"
 import { Ionicons } from "@expo/vector-icons";
-import { TouchableOpacity } from "react-native"
-import { TextInput, CheckBox } from "react-native"
+import { StatusBar, SafeAreaView, Dimensions, Text, TextInput, CheckBox, TouchableOpacity, View } from "react-native"
 import { useState } from "react"
 import { Services } from "../../services"
+
 const { width } = Dimensions.get('screen')
 export const Login = ({ navigation }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
     return (
         <View style={{ flex: 1 }}>
             <SafeAreaView >
@@ -42,7 +36,7 @@ export const Login = ({ navigation }) => {
                     </View>
                     <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 25 }}>
 
-                        <TouchableOpacity onPress={() => Services.AuthUser(email, password)} style={{
+                        <TouchableOpacity onPress={() => Services.AuthUser({ email, password, navigation })} style={{
                             backgroundColor: 'black', padding: 15, borderRadius: 30, marginBottom: 20, width: width - 60, height: 60, alignItems: 'center'
                         }} >
                             < Text style={{ fontWeight: 'bold', fontSize: 15, color: 'white' }}>SIGN </Text>
