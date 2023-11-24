@@ -41,7 +41,7 @@ export const Onboard = ({ navigation }) => {
                             width: width - 60, height: 60, flexDirection: 'row', alignItems: 'center', justifyContent: 'center'
                         }} >
                             <Ionicons name="logo-facebook" color={'white'} size={22} style={{ marginRight: 20 }} />
-                            <Text style={{ fontWeight: 'bold', fontSize: 15, color: 'white' }}>SIGN UP WITH FACEBOOK</Text>
+                            <Text style={{ fontWeight: 'bold', fontSize: 15, color: 'white' }}>CONTINUE WITH FACEBOOK</Text>
                         </TouchableOpacity>
                     </View>
 
