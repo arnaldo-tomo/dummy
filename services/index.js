@@ -10,6 +10,8 @@ export class Services {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
+                    // username: email,
+                    // password: password,
                     username: 'kminchelle',
                     password: '0lelplR',
                 })
@@ -17,17 +19,25 @@ export class Services {
                 .then(res => res.json())
                 .then((p) => {
                     if (p.token) {
-                        console.log(p)
                         this.storeData(p)
                         this.GoHome({ navigation })
                     }
-                    if (p.message) {
-                        Alert.alert(p.message)
-                    }
+
                 })
                 .catch((error) => console.log('catch no login', error))
         } catch (error) {
             console.log('Catch', error)
+        }
+    }
+
+    static show = async () => {
+        try {
+            const fetch = await fetch('https://dummyjson.com/products')
+                .then(res => res.json())
+                .then((e) => { return e })
+
+        } catch (e) {
+            console.log(e)
         }
     }
 
@@ -68,14 +78,15 @@ export class Services {
 
 
     static GoHome({ navigation }) {
-        navigation.reset({ index: 0, routes: [{ name: 'Home' }] });
+        navigation.reset({ index: 0, routes: [{ name: 'GoHome' }] });
     }
+
+
     static GoOut({ navigation }) {
-        this.removeValue();
-        navigation.reset({ index: 0, routes: [{ name: 'Login' }] });
+        this.removeValue()
+        navigation.reset({ index: 0, routes: [{ name: 'Logout' }] });
     }
 
 
 }
-
 
