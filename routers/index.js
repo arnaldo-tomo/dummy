@@ -17,7 +17,6 @@ function StackNavgation() {
         Services.getData()
             .then((res) => {
                 setChecked(res)
-                console.log('Checked:', res)
             })
 
     }, [])
@@ -29,9 +28,9 @@ function StackNavgation() {
                     :
                     <Stack.Screen name="OnBoard" component={Onboard} options={{ headerShown: false }} />
                 }
-                <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
                 <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
-                <Stack.Screen name="OneBoard" component={Onboard} options={{ headerShown: false }} />
+                <Stack.Screen name="GoHome" component={Home} options={{ headerShown: false }} />
+                <Stack.Screen name="Logout" component={Onboard} options={{ headerShown: false }} />
             </Stack.Navigator>
         </NavigationContainer>
     );
