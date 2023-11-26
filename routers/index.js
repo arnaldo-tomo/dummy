@@ -7,6 +7,7 @@ import { Login } from '../src/auth/login';
 import { useState, useEffect } from "react"
 import { Services } from '../services';
 import { Home } from '../src/screens/home';
+import { Details } from '../src/Details';
 
 function StackNavgation() {
     const Stack = createNativeStackNavigator();
@@ -31,6 +32,7 @@ function StackNavgation() {
                 <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
                 <Stack.Screen name="GoHome" component={Home} options={{ headerShown: false }} />
                 <Stack.Screen name="Logout" component={Onboard} options={{ headerShown: false }} />
+                <Stack.Screen name="Details" component={Details} options={{ headerShown: false }} />
             </Stack.Navigator>
         </NavigationContainer>
     );
