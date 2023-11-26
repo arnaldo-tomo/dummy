@@ -1,4 +1,4 @@
-import { Dimensions, FlatList, SafeAreaView, ScrollView, Text, TextInput, TouchableOpacity } from "react-native"
+import { ActivityIndicator, Dimensions, FlatList, SafeAreaView, ScrollView, Text, TextInput, TouchableOpacity } from "react-native"
 import { View } from "react-native";
 import { Services } from "../../../services";
 import { StatusBar } from "expo-status-bar";
@@ -27,9 +27,9 @@ export const Home = ({ navigation }) => {
         fetchData();
     }, [])
     return (
-        <SafeAreaView>
+        <SafeAreaView style={{ backgroundColor: 'white', flex: 1 }}>
             <StatusBar style="dark" />
-            <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 40, width: width - 40, left: 20 }}>
+            <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 40, width: "90%", left: 20, }}>
                 <TouchableOpacity >
                     <Ionicons name="menu" size={35} />
                 </TouchableOpacity>
@@ -45,15 +45,13 @@ export const Home = ({ navigation }) => {
                     }}>0</Text>
                 </TouchableOpacity>
             </View>
-            <View style={{ width: width - 40, left: 20, marginTop: 10 }}>
-                <Text style={{ fontWeight: 'bold', fontSize: 16 }}>Product</Text>
-            </View>
+
             <View style={{
-                marginLeft: 20, width: width - 40, borderColor: 'black',
-                borderWidth: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around', height: 40, marginTop: 20
+                marginLeft: 15, width: "90%", borderColor: 'black',
+                borderWidth: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around', height: 40, marginTop: 15, borderRadius: 16
             }}>
                 <Ionicons name="search" style={{ position: 'relative', left: 0 }} size={20} />
-                <TextInput placeholder="Seach Kits" style={{ position: 'relative', width: width - 120 }} />
+                <TextInput placeholder="Seach Kits" style={{ position: 'relative', width: "80%", }} />
                 <Ionicons name="filter" style={{ position: 'relative', right: 0 }} size={20} />
             </View>
             <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginLeft: 20, width: width - 40, marginTop: 20 }}>
@@ -65,30 +63,101 @@ export const Home = ({ navigation }) => {
                     <Text style={{ fontWeight: 'bold' }}>Filter</Text>
                 </View>
             </View>
+            <View style={{ width: "90%", left: 20, marginTop: 10 }}>
+                <Text style={{ fontWeight: 'bold', fontSize: 16 }}>Product</Text>
+            </View>
             <View>
-                {products ? <>
-                    {products.map((e) =>
+                {products ?
 
-                        <ScrollView horizontal n>
+                    <>
 
-                            <TouchableOpacity key={e.id} style={{ flexDirection: 'row', justifyContent: 'space-between', marginLeft: 20, width: width - 40, }}>
+                        <FlatList data={products} numColumns={2} keyExtractor={products.id} renderItem={({ item }) =>
 
-                                <View style={{ justifyContent: 'space-between', flexDirection: 'row', alignItems: 'center' }}>
-                                    <Image source={{ uri: e.thumbnail }} style={{ width: 100, height: 100 }} />
-                                    <Text>{e.id}</Text>
+                            <TouchableOpacity onPress={() => navigation.navigate('Details', item)} style={{
+                                flexDirection: 'row', justifyContent: 'space-between', elevation: 1,
+                                width: "45%", height: 220, elevation: 10, backgroundColor: 'white', padding: 5, marginTop: 20, marginLeft: 15, borderRadius: 20
+
+                            }}>
+                                <View>
+                                    <Image source={{ uri: item.thumbnail }} style={{ width: 170, height: 100, borderRadius: 16, justifyContent: 'center' }} />
+                                    <Text style={{ fontWeight: 'bold', marginTop: 10 }}>{item.title}</Text>
+                                    <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 5 }}>
+                                        <Text style={{ fontWeight: 'bold' }}>stock</Text>
+                                        <Text style={{ fontWeight: 'bold' }}>{item.stock}</Text>
+                                    </View>
+                                    <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 5 }}>
+                                        <Text style={{ fontWeight: 'bold' }}>${item.price}.00</Text>
+                                        <Ionicons name="add" size={20} color={'white'} style={{ backgroundColor: 'black', borderRadius: 16 }} />
+                                    </View>
                                 </View>
-
-
-
                             </TouchableOpacity>
-                        </ScrollView>
 
-                    )}
+                        } />
 
-                </>
+                    </>
                     :
                     <>
-                        <Text style={{ marginLeft: 20, fontWeight: 'bold' }}>Carregando//</Text>
+
+                        <View style={{ flexDirection: 'row' }}>
+
+                            <View style={{
+                                flexDirection: 'row', justifyContent: 'space-between', elevation: 1, justifyContent: 'center',
+                                width: "45%", height: 220, elevation: 10, backgroundColor: 'white', padding: 5, marginTop: 20, marginLeft: 15, borderRadius: 20
+
+                            }}>
+
+                                <ActivityIndicator shouldRasterizeIOS={true} size={'large'} collapsable={true} color={'black'} />
+                            </View>
+                            <View style={{
+                                flexDirection: 'row', justifyContent: 'space-between', elevation: 1, justifyContent: 'center',
+                                width: "45%", height: 220, elevation: 10, backgroundColor: 'white', padding: 5, marginTop: 20, marginLeft: 15, borderRadius: 20
+
+                            }}>
+
+                                <ActivityIndicator shouldRasterizeIOS={true} size={'large'} collapsable={true} color={'black'} />
+                            </View>
+
+                        </View>
+                        <View style={{ flexDirection: 'row' }}>
+
+                            <View style={{
+                                flexDirection: 'row', justifyContent: 'space-between', elevation: 1, justifyContent: 'center',
+                                width: "45%", height: 220, elevation: 10, backgroundColor: 'white', padding: 5, marginTop: 20, marginLeft: 15, borderRadius: 20
+
+                            }}>
+
+                                <ActivityIndicator shouldRasterizeIOS={true} size={'large'} collapsable={true} color={'black'} />
+                            </View>
+                            <View style={{
+                                flexDirection: 'row', justifyContent: 'space-between', elevation: 1, justifyContent: 'center',
+                                width: "45%", height: 220, elevation: 10, backgroundColor: 'white', padding: 5, marginTop: 20, marginLeft: 15, borderRadius: 20
+
+                            }}>
+
+                                <ActivityIndicator shouldRasterizeIOS={true} size={'large'} collapsable={true} color={'black'} />
+                            </View>
+
+                        </View>
+                        <View style={{ flexDirection: 'row' }}>
+
+                            <View style={{
+                                flexDirection: 'row', justifyContent: 'space-between', elevation: 1, justifyContent: 'center',
+                                width: "45%", height: 220, elevation: 10, backgroundColor: 'white', padding: 5, marginTop: 20, marginLeft: 15, borderRadius: 20
+
+                            }}>
+
+                                <ActivityIndicator shouldRasterizeIOS={true} size={'large'} collapsable={true} color={'black'} />
+                            </View>
+                            <View style={{
+                                flexDirection: 'row', justifyContent: 'space-between', elevation: 1, justifyContent: 'center',
+                                width: "45%", height: 220, elevation: 10, backgroundColor: 'white', padding: 5, marginTop: 20, marginLeft: 15, borderRadius: 20
+
+                            }}>
+
+                                <ActivityIndicator shouldRasterizeIOS={true} size={'large'} collapsable={true} color={'black'} />
+                            </View>
+
+                        </View>
 
                     </>
                 }
@@ -97,8 +166,8 @@ export const Home = ({ navigation }) => {
 
 
 
-
             </View>
-        </SafeAreaView>
+
+        </SafeAreaView >
     )
 }
