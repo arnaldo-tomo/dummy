@@ -9,6 +9,7 @@ import { useEffect, useState } from "react"
 const { width } = Dimensions.get('screen')
 
 export const Home = ({ navigation }) => {
+    // nsbgfbj
     const [products, setProducts] = useState('');
 
     useEffect(() => {
