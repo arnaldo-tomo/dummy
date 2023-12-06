@@ -34,7 +34,7 @@ export const Home = ({ navigation }) => {
                 <StatusBar style="dark" />
 
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 40, width: "90%", left: 20, }}>
-                    <TouchableOpacity >
+                    <TouchableOpacity onPress={() => Services.GoOut({ navigation })} >
                         <Ionicons name="menu" size={35} />
                     </TouchableOpacity>
                     <TouchableOpacity >
@@ -73,103 +73,103 @@ export const Home = ({ navigation }) => {
                     <Text style={{ fontWeight: 'bold', fontSize: 16 }}>Product</Text>
                 </View>
 
-                <ScrollView >
-                    {products ?
+                {/* <ScrollView > */}
+                {products ?
 
-                        <>
+                    <>
 
-                            <FlatList data={products} numColumns={2} keyExtractor={products.id} renderItem={({ item }) =>
+                        <FlatList data={products} numColumns={2} keyExtractor={products.id} renderItem={({ item }) =>
 
-                                <TouchableOpacity onPress={() => navigation.navigate('Details', item)} style={{
-                                    flexDirection: 'row', justifyContent: 'space-between', elevation: 1,
-                                    width: "45%", height: 220, elevation: 10, backgroundColor: 'white', padding: 5, marginTop: 20, marginLeft: 15, borderRadius: 20
+                            <TouchableOpacity onPress={() => navigation.navigate('Details', item)} style={{
+                                flexDirection: 'row', justifyContent: 'space-between', elevation: 1,
+                                width: "45%", height: 220, elevation: 10, backgroundColor: 'white', padding: 5, marginTop: 20, marginLeft: 15, borderRadius: 20
 
-                                }}>
-                                    <View>
-                                        <Image source={{ uri: item.thumbnail }} style={{ width: 170, height: 100, borderRadius: 16, justifyContent: 'center' }} />
-                                        <Text style={{ fontWeight: 'bold', marginTop: 10 }}>{item.title}</Text>
-                                        <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 5 }}>
-                                            <Text style={{ fontWeight: 'bold' }}>stock</Text>
-                                            <Text style={{ fontWeight: 'bold' }}>{item.stock}</Text>
-                                        </View>
-                                        <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 5 }}>
-                                            <Text style={{ fontWeight: 'bold' }}>${item.price}.00</Text>
-                                            <Ionicons name="add" size={20} color={'white'} style={{ backgroundColor: 'black', borderRadius: 16 }} />
-                                        </View>
+                            }}>
+                                <View>
+                                    <Image source={{ uri: item.thumbnail }} style={{ width: 170, height: 100, borderRadius: 16, justifyContent: 'center' }} />
+                                    <Text style={{ fontWeight: 'bold', marginTop: 10 }}>{item.title}</Text>
+                                    <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 5, marginRight: 10 }}>
+                                        <Text style={{ fontWeight: 'bold' }}>stock</Text>
+                                        <Text style={{ fontWeight: 'bold' }}>{item.stock}</Text>
                                     </View>
-                                </TouchableOpacity>
-
-                            }
-                            />
-
-                        </>
-                        :
-                        <>
-
-                            <View style={{ flexDirection: 'row' }}>
-
-                                <View style={{
-                                    flexDirection: 'row', justifyContent: 'space-between', elevation: 1, justifyContent: 'center',
-                                    width: "45%", height: 220, elevation: 10, backgroundColor: 'white', padding: 5, marginTop: 20, marginLeft: 15, borderRadius: 20
-
-                                }}>
-
-                                    <ActivityIndicator shouldRasterizeIOS={true} size={'large'} collapsable={true} color={'black'} />
+                                    <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 5, marginRight: 10 }}>
+                                        <Text style={{ fontWeight: 'bold' }}>${item.price}.00</Text>
+                                        <Ionicons name="add" size={20} color={'white'} style={{ backgroundColor: 'black', borderRadius: 16 }} />
+                                    </View>
                                 </View>
-                                <View style={{
-                                    flexDirection: 'row', justifyContent: 'space-between', elevation: 1, justifyContent: 'center',
-                                    width: "45%", height: 220, elevation: 10, backgroundColor: 'white', padding: 5, marginTop: 20, marginLeft: 15, borderRadius: 20
+                            </TouchableOpacity>
 
-                                }}>
+                        }
+                        />
 
-                                    <ActivityIndicator shouldRasterizeIOS={true} size={'large'} collapsable={true} color={'black'} />
-                                </View>
+                    </>
+                    :
+                    <>
 
+                        <View style={{ flexDirection: 'row' }}>
+
+                            <View style={{
+                                flexDirection: 'row', justifyContent: 'space-between', elevation: 1, justifyContent: 'center',
+                                width: "45%", height: 220, elevation: 10, backgroundColor: 'white', padding: 5, marginTop: 20, marginLeft: 15, borderRadius: 20
+
+                            }}>
+
+                                <ActivityIndicator shouldRasterizeIOS={true} size={'large'} collapsable={true} color={'black'} />
                             </View>
-                            <View style={{ flexDirection: 'row' }}>
+                            <View style={{
+                                flexDirection: 'row', justifyContent: 'space-between', elevation: 1, justifyContent: 'center',
+                                width: "45%", height: 220, elevation: 10, backgroundColor: 'white', padding: 5, marginTop: 20, marginLeft: 15, borderRadius: 20
 
-                                <View style={{
-                                    flexDirection: 'row', justifyContent: 'space-between', elevation: 1, justifyContent: 'center',
-                                    width: "45%", height: 220, elevation: 10, backgroundColor: 'white', padding: 5, marginTop: 20, marginLeft: 15, borderRadius: 20
+                            }}>
 
-                                }}>
-
-                                    <ActivityIndicator shouldRasterizeIOS={true} size={'large'} collapsable={true} color={'black'} />
-                                </View>
-                                <View style={{
-                                    flexDirection: 'row', justifyContent: 'space-between', elevation: 1, justifyContent: 'center',
-                                    width: "45%", height: 220, elevation: 10, backgroundColor: 'white', padding: 5, marginTop: 20, marginLeft: 15, borderRadius: 20
-
-                                }}>
-
-                                    <ActivityIndicator shouldRasterizeIOS={true} size={'large'} collapsable={true} color={'black'} />
-                                </View>
-
-                            </View>
-                            <View style={{ flexDirection: 'row' }}>
-
-                                <View style={{
-                                    flexDirection: 'row', justifyContent: 'space-between', elevation: 1, justifyContent: 'center',
-                                    width: "45%", height: 220, elevation: 10, backgroundColor: 'white', padding: 5, marginTop: 20, marginLeft: 15, borderRadius: 20
-
-                                }}>
-
-                                    <ActivityIndicator shouldRasterizeIOS={true} size={'large'} collapsable={true} color={'black'} />
-                                </View>
-                                <View style={{
-                                    flexDirection: 'row', justifyContent: 'space-between', elevation: 1, justifyContent: 'center',
-                                    width: "45%", height: 220, elevation: 10, backgroundColor: 'white', padding: 5, marginTop: 20, marginLeft: 15, borderRadius: 20
-
-                                }}>
-
-                                    <ActivityIndicator shouldRasterizeIOS={true} size={'large'} collapsable={true} color={'black'} />
-                                </View>
-
+                                <ActivityIndicator shouldRasterizeIOS={true} size={'large'} collapsable={true} color={'black'} />
                             </View>
 
-                        </>
-                    }
-                </ScrollView>
+                        </View>
+                        <View style={{ flexDirection: 'row' }}>
+
+                            <View style={{
+                                flexDirection: 'row', justifyContent: 'space-between', elevation: 1, justifyContent: 'center',
+                                width: "45%", height: 220, elevation: 10, backgroundColor: 'white', padding: 5, marginTop: 20, marginLeft: 15, borderRadius: 20
+
+                            }}>
+
+                                <ActivityIndicator shouldRasterizeIOS={true} size={'large'} collapsable={true} color={'black'} />
+                            </View>
+                            <View style={{
+                                flexDirection: 'row', justifyContent: 'space-between', elevation: 1, justifyContent: 'center',
+                                width: "45%", height: 220, elevation: 10, backgroundColor: 'white', padding: 5, marginTop: 20, marginLeft: 15, borderRadius: 20
+
+                            }}>
+
+                                <ActivityIndicator shouldRasterizeIOS={true} size={'large'} collapsable={true} color={'black'} />
+                            </View>
+
+                        </View>
+                        <View style={{ flexDirection: 'row' }}>
+
+                            <View style={{
+                                flexDirection: 'row', justifyContent: 'space-between', elevation: 1, justifyContent: 'center',
+                                width: "45%", height: 220, elevation: 10, backgroundColor: 'white', padding: 5, marginTop: 20, marginLeft: 15, borderRadius: 20
+
+                            }}>
+
+                                <ActivityIndicator shouldRasterizeIOS={true} size={'large'} collapsable={true} color={'black'} />
+                            </View>
+                            <View style={{
+                                flexDirection: 'row', justifyContent: 'space-between', elevation: 1, justifyContent: 'center',
+                                width: "45%", height: 220, elevation: 10, backgroundColor: 'white', padding: 5, marginTop: 20, marginLeft: 15, borderRadius: 20
+
+                            }}>
+
+                                <ActivityIndicator shouldRasterizeIOS={true} size={'large'} collapsable={true} color={'black'} />
+                            </View>
+
+                        </View>
+
+                    </>
+                }
+                {/* </ScrollView> */}
 
 
             </SafeAreaView >
