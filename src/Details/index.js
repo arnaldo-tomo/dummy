@@ -1,4 +1,4 @@
-import { Dimensions, ImageBackground, SafeAreaView, ScrollView, Text, TouchableOpacity } from "react-native"
+import { Dimensions, Image, ImageBackground, SafeAreaView, ScrollView, Text, TouchableOpacity } from "react-native"
 import { View } from "react-native"
 const { width, height } = Dimensions.get('screen');
 import { Ionicons } from "@expo/vector-icons";
@@ -10,35 +10,39 @@ export const Details = ({ route, navigation }) => {
 
                 <View>
                     <ScrollView horizontal>
-                        {images.map((item) =>
-                            <ImageBackground key={item} source={{ uri: item }} style={{ width: width, height: 210 }} resizeMode='contain'>
-                                <View style={{ bottom: 0, position: 'absolute', justifyContent: 'center', alignSelf: 'center', flexDirection: 'row' }}>
-                                    <Text style={{ fontWeight: 'bold', color: 'white' }}> Deslize</Text>
-                                    <Ionicons name="chevron-forward" size={20} color={'white'} />
-                                </View>
-                            </ImageBackground>
-                        )}
+
+                        <ImageBackground source={{ uri: thumbnail }} style={{ width: width, height: 400 }} resizeMode='contain'>
+                            <View style={{ bottom: 0, position: 'absolute', justifyContent: 'center', alignSelf: 'center', flexDirection: 'row' }}>
+                            </View>
+                        </ImageBackground>
+
                     </ScrollView>
                     <View style={{
                         flexDirection: 'row', justifyContent: 'space-between', marginTop: 20, padding: 20,
                         elevation: 1, position: 'absolute', zIndex: 1, width: width
                     }}>
                         <TouchableOpacity onPress={() => { navigation.goBack() }}>
-                            <Ionicons name="chevron-back-circle" size={30} />
+                            <Ionicons name="chevron-back-circle" size={40} />
                         </TouchableOpacity>
                         <TouchableOpacity>
-                            <Ionicons name="heart-outline" size={30} />
+                            <Ionicons name="heart-outline" size={40} />
                         </TouchableOpacity>
                     </View>
-                    <View style={{ width: width, height: height, backgroundColor: 'white', borderRadius: 16, elevation: 1, padding: 20 }}>
-                        <Text style={{ fontWeight: 'bold', fontSize: 20 }}>{title}</Text>
-                        <Text style={{ fontWeight: 'bold', fontSize: 20 }}>{price}</Text>
-                        <Text style={{ fontWeight: 'bold', fontSize: 20 }}>{description}</Text>
-                        <Text style={{ fontWeight: 'bold', fontSize: 20 }}>{discountPercentage}</Text>
-                        <Text style={{ fontWeight: 'bold', fontSize: 20 }}>{rating}</Text>
-                        <Text style={{ fontWeight: 'bold', fontSize: 20 }}>{stock}</Text>
-                        <Text style={{ fontWeight: 'bold', fontSize: 20 }}>{brand}</Text>
-                        <Text style={{ fontWeight: 'bold', fontSize: 20 }}>{category}</Text>
+                    <View style={{ width: width, height: height, backgroundColor: 'white', borderRadius: 30, elevation: 1, padding: 20 }}>
+                        <View style={{ backgroundColor: 'gray', height: 4, width: 50, borderRadius: 26, alignContent: 'center', alignSelf: 'center' }}></View>
+
+                        <Text style={{ fontWeight: 'bold', fontSize: 20, marginTop: 10 }}>{title}</Text>
+                        <Text style={{ fontWeight: 'bold', marginTop: 10 }}>MZN{price}</Text>
+                        <Text style={{ fontWeight: '500', color: 'gray', marginTop: 10 }}>{description}</Text>
+
+                        <Text style={{ fontWeight: 'bold', fontSize: 20, marginTop: 10 }}>Other products</Text>
+                        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} >
+                            {images.map((item) =>
+                                <View style={{ marginRight: 15, marginTop: 10, borderRadius: 16, elevation: 1, width: 110, height: 110, backgroundColor: 'white', alignContent: 'center', alignItems: 'center' }}>
+                                    <Image source={{ uri: item }} width={100} height={100} style={{ borderRadius: 16, padding: 5, marginTop: 5 }} />
+                                </View>
+                            )}
+                        </ScrollView>
                     </View>
 
                 </View>
