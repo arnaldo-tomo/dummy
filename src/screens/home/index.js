@@ -43,15 +43,15 @@ export const Home = ({ navigation }) => {
 
                     <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 40, width: "90%", left: 20, }}>
                         <TouchableOpacity >
-                            <Ionicons name="menu" size={35} />
                             <Menu>
-                                <MenuTrigger text='Select action' />
-                                <MenuOptions>
-                                    <MenuOption onSelect={() => alert(`Save`)} text='Save' />
+                                <MenuTrigger  >
+                                    <Ionicons name="menu" size={35} />
+                                </MenuTrigger>
+
+                                <MenuOptions >
                                     <MenuOption onSelect={() => alert(`Delete`)} >
-                                        <Text style={{ color: 'red' }}>Delete</Text>
+                                        <Text onPress={() => { Services.GoOut({ navigation }) }} style={{ color: 'red' }}>Terminar Sessao</Text>
                                     </MenuOption>
-                                    <MenuOption onSelect={() => alert(`Not called`)} disabled={true} text='Disabled' />
                                 </MenuOptions>
                             </Menu>
                         </TouchableOpacity>
