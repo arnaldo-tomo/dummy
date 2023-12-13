@@ -13,10 +13,10 @@ Este projeto não apenas solidificou meu entendimento sobre o React Native e a i
 No âmbito dos recursos implementados, o aplicativo incorpora uma autenticação robusta, permitindo aos usuários realizar o login e obter tokens de acesso essenciais para autenticar as solicitações à API. Além disso, recursos relacionados aos produtos foram implementados, desde a obtenção de todos os produtos até a pesquisa, paginação, adição, atualização e exclusão de produtos. Esses recursos proporcionam uma experiência completa aos usuários, permitindo uma exploração abrangente das diversas categorias e funcionalidades disponíveis na aplicação.
 
 
-<img src="Screenshot/Screenshot_20231213-092729_Expo%20Go.jpg" width="160">  <img src="Screenshot/Screenshot_20231130-204256_Expo%20Go.jpg" width="160">  <img src="Screenshot/Screenshot_20231130-204304_Expo%20Go.jpg" width="160">
+<img src="Screenshot/Screenshot_20231213-092729_Expo%20Go.jpg" width="160">  <img src="Screenshot/Screenshot_20231213-092732_Expo%20Go.jpg" width="160"> 
 
 
-<img src="Screenshot/Screenshot_20231130-204308_Expo%20Go.jpg" width="160">  <img src="Screenshot/Screenshot_20231130-204313_Expo%20Go.jpg" width="160">   <img src="Screenshot/Screenshot_20231130-204317_Expo%20Go.jpg" width="160">
+<img src="Screenshot/Screenshot_20231213-092739_Expo%20Go.jpg" width="160">  <img src="Screenshot/Screenshot_20231213-092750_Expo%20Go.jpg" width="160">  
 
 
  
