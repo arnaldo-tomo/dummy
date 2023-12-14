@@ -10,7 +10,7 @@ Ao longo do desenvolvimento, deparei-me com desafios estimulantes, desde a integ
 
 Este projeto não apenas solidificou meu entendimento sobre o React Native e a integração de APIs, mas também me instigou a explorar novas possibilidades dentro do vasto campo do desenvolvimento de software. Cada linha de código representa não apenas uma funcionalidade, mas também um passo adiante em minha jornada de crescimento profissional.
 
-No âmbito dos recursos implementados, o aplicativo incorpora uma autenticação robusta, permitindo aos usuários realizar o login e obter tokens de acesso essenciais para autenticar as solicitações à API. Além disso, recursos relacionados aos produtos foram implementados, desde a obtenção de todos os produtos até a pesquisa, paginação, adição, atualização e exclusão de produtos. Esses recursos proporcionam uma experiência completa aos usuários, permitindo uma exploração abrangente das diversas categorias e funcionalidades disponíveis na aplicação.
+ Os recursos implementados, o aplicativo incorpora uma autenticação robusta, permitindo aos usuários realizar o login e obter tokens de acesso essenciais para autenticar as solicitações à API. Além disso, recursos relacionados aos produtos foram implementados, desde a obtenção de todos os produtos até a pesquisa, paginação, adição, atualização e exclusão de produtos. Esses recursos proporcionam uma experiência completa aos usuários, permitindo uma exploração abrangente das diversas categorias e funcionalidades disponíveis na aplicação.
 
 
 <img src="Screenshot/Screenshot_20231213-092729_Expo%20Go.jpg" width="160">  <img src="Screenshot/Screenshot_20231213-092732_Expo%20Go.jpg" width="160"> 
