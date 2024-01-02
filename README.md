@@ -8,7 +8,7 @@ A escolha da REST API do DUMMT como fonte de dados para o aplicativo trouxe uma 
 
 Ao longo do desenvolvimento, deparei-me com desafios estimulantes, desde a integração do React Native com a REST API até a manipulação e exibição dos dados em um formato coerente e atraente para o usuário final. A jornada tem sido não apenas técnica, mas também educativa, proporcionando um aprendizado valioso sobre boas práticas de desenvolvimento e aprimoramento das habilidades na área.
 
-Este projeto não apenas solidificou meu entendimento sobre o React Native e a integração de APIs, mas também me instigou a explorar novas possibilidades dentro do vasto campo do desenvolvimento de software. Cada linha de código representa não apenas uma funcionalidade, mas também um passo adiante em minha jornada de crescimento profissional.
+Este projeto não apenas solidificou meu entendimento sobre o React Native e a integração de APIs, mas também me instigou a explorar novas possibilidades dentro do vasto campo do desenvolvimento de software. Cada linha de código representa não apenas uma funcionalidade, mas também um passo adiante em minha jornada de crescimento profissional...
 
  Os recursos implementados, o aplicativo incorpora uma autenticação robusta, permitindo aos usuários realizar o login e obter tokens de acesso essenciais para autenticar as solicitações à API. Além disso, recursos relacionados aos produtos foram implementados, desde a obtenção de todos os produtos até a pesquisa, paginação, adição, atualização e exclusão de produtos. Esses recursos proporcionam uma experiência completa aos usuários, permitindo uma exploração abrangente das diversas categorias e funcionalidades disponíveis na aplicação.
 
