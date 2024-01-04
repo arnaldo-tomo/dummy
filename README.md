@@ -2,7 +2,7 @@
 
 Sempre em busca de desafios durante meu tempo livre, tenho direcionado minha energia para o empolgante mundo do desenvolvimento de aplicativos e sistemas. Recentemente, embarquei em um projeto fascinante: a criação de um aplicativo utilizando React Native para consumir a REST API do DUMMT.
 
-O React Native tem se destacado como uma ferramenta poderosa para o desenvolvimento de aplicativos móveis, permitindo a criação de soluções eficientes e altamente funcionais. Optei por este framework devido à sua flexibilidade e à capacidade de compartilhar código entre plataformas, o que otimiza significativamente o processo de desenvolvimento.
+O React Native tem se destacado como uma ferramenta poderosa para o desenvolvimento de aplicativos móveis, permitindo a criação de soluções eficientes e altamente funcionais. Optei por este framework devido à sua flexibilidade e à capacidade de compartilhar código entre plataformas, o que otimiza significativamente o processo de desenvolvimento...
 
 A escolha da REST API do DUMMT como fonte de dados para o aplicativo trouxe uma camada adicional de interessante complexidade ao projeto. Esta API fornece dados fictícios, simulando diversas situações do mundo real, o que possibilita um ambiente de testes robusto para a aplicação.
 
