@@ -4,7 +4,7 @@ Sempre em busca de desafios durante meu tempo livre, tenho direcionado minha ene
 
 O React Native tem se destacado como uma ferramenta poderosa para o desenvolvimento de aplicativos móveis, permitindo a criação de soluções eficientes e altamente funcionais. Optei por este framework devido à sua flexibilidade e à capacidade de compartilhar código entre plataformas, o que otimiza significativamente o processo de desenvolvimento...
 
-A escolha da REST API do DUMMT como fonte de dados para o aplicativo trouxe uma camada adicional de interessante complexidade ao projeto. Esta API fornece dados fictícios, simulando diversas situações do mundo real, o que possibilita um ambiente de testes robusto para a aplicação.
+A escolha da REST API do DUMMT como fonte de dados para o aplicativo trouxe uma camada adicional de interessante complexidade ao projeto. Esta API fornece dados fictícios, simulando diversas situações do mundo real, o que possibilita um ambiente de testes robusto para a aplicação.//
 
 Ao longo do desenvolvimento, deparei-me com desafios estimulantes, desde a integração do React Native com a REST API até a manipulação e exibição dos dados em um formato coerente e atraente para o usuário final. A jornada tem sido não apenas técnica, mas também educativa, proporcionando um aprendizado valioso sobre boas práticas de desenvolvimento e aprimoramento das habilidades na área.
 
