@@ -10,10 +10,10 @@ export class Services {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    // username: email,
-                    // password: password,
-                    username: 'kminchelle',
-                    password: '0lelplR',
+                    username: email,
+                    password: password,
+                    // username: 'kminchelle',
+                    // password: '0lelplR',
                 })
             })
                 .then(res => res.json())
