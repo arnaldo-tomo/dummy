@@ -28,9 +28,9 @@ export const Login = ({ navigation }) => {
 
                             {erro && <>
 
-                                <View style={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'row', alignContent: 'center', alignSelf: 'center' }}>
-                                    <Ionicons name="warning" color={'red'} size={20} />
-                                    <Text style={{ fontWeight: 'bold', color: 'red', fontSize: 15, marginBottom: 5 }}>Credenciais inválidas</Text>
+                                <View style={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'row', alignContent: 'center', alignSelf: 'center', marginBottom: 4 }}>
+                                    <Ionicons name="warning" color={'red'} size={25} style={{ justifyContent: 'center', alignItems: 'center' }} />
+                                    <Text style={{ fontWeight: 'bold', color: 'red', fontSize: 15, }}>Credenciais inválidas</Text>
                                 </View>
                                 <View style={{ borderColor: 'red', borderWidth: 1, marginBottom: 20 }}></View>
                             </>
